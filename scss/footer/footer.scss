@@ -1,0 +1,23 @@
+footer {
+  height: $nav-footer-height;
+  background-color: pink;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  .footer-content {
+    color: $site-white;
+    max-width: $content-width;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // justify-content: center;
+
+    p {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      text-align: center;
+    }
+  }
+}

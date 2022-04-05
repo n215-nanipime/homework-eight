@@ -1,0 +1,791 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: white;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+#app {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(../fonts/proxima_nova_extra_condensed_thin-webfont.woff);
+}
+@font-face {
+  font-family: mySecondFont;
+  src: url(../fonts/proxima-nova-thin-webfont.woff);
+}
+@font-face {
+  font-family: myThirdFont;
+  src: url(../fonts/proximanovascosfextracondensed-webfont.woff);
+}
+nav {
+  max-width: 980px;
+  margin: 0 auto;
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid;
+  border-bottom-color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  z-index: 99;
+}
+nav .logo {
+  width: 92px;
+  height: 38px;
+}
+nav .links a {
+  text-decoration: none;
+  margin-left: 10px;
+  color: #000000;
+}
+nav .links span {
+  color: #79addc;
+  margin-left: 10px;
+}
+
+.banner {
+  max-width: 1280px;
+  height: 500px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/restaurant-banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+}
+.banner .hero-text {
+  max-width: 980px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+.banner .hero-text h1 {
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: lighter;
+  font-family: Proxima Nova ScOsf ExCn Rg, sans-serif;
+}
+.banner .hero-text button {
+  background-color: #79addc;
+  width: 121px;
+  height: 40px;
+  color: #ffffff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
+}
+.banner .hero-text p {
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
+}
+
+.offers {
+  width: 818px;
+  min-height: 200px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+.offers .offer .hero-image {
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: -80px auto 0 auto;
+  position: relative;
+}
+.offers .offer .hero-image .hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.offers .offer .hero-image .hero-text h1 {
+  color: #ffffff;
+  font-size: 60px;
+  font-family: Proxima Nova ScOsf ExCn Rg, sans-serif;
+  font-weight: lighter;
+}
+.offers .offer .hero-image .hero-text button {
+  background-color: #79addc;
+  width: 121px;
+  height: 40px;
+  color: #ffffff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
+  border-radius: 50px;
+}
+.offers .offer .hero-image .hero-text h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  font-family: Proxima Nova ScOsf ExCn Rg, sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  .offers {
+    width: 250px;
+    flex-direction: column;
+    min-height: 940px;
+  }
+}
+.about {
+  margin-top: 7%;
+  margin-bottom: 180px;
+}
+.about .about-header h1 {
+  margin-bottom: 2px;
+  font-family: mySecondFont, myThirdFont;
+  font-size: 40px;
+  font-style: bold;
+}
+.about .about-header .border-bottom {
+  width: 171px;
+  height: 2px;
+  background-color: #000;
+  margin-bottom: 3%;
+}
+.about .about-header img {
+  width: 980px;
+  margin-bottom: 2%;
+}
+.about .about-header p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+@media all and (max-width: 800px) {
+  .about {
+    text-align: center;
+    flex-direction: column;
+  }
+  .about .about-header .border-bottom {
+    margin: 0 auto;
+    margin-bottom: 3%;
+  }
+  .about .about-header img {
+    max-width: 600px;
+  }
+}
+.about-promo {
+  max-width: 980px;
+  min-width: 304px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.about-promo .promo {
+  width: 298px;
+  height: 347px;
+  background-color: #faebd7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/tour-israel/israel-tour-01.jpg);
+}
+.about-promo .promo .promo-text {
+  font-size: 24px;
+  font-family: mySecondFont;
+  margin-bottom: 60px;
+}
+.about-promo .promo .read-btn {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.about-promo #promo2 {
+  background-image: url(../images/tour-israel/israel-tour-02.jpg);
+}
+.about-promo #promo3 {
+  background-image: url(../images/tour-israel/israel-tour-03.jpg);
+}
+
+.about-promo2 {
+  max-width: 980px;
+  min-width: 304px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.about-promo2 .promo {
+  width: 298px;
+  height: 347px;
+  background-color: #faebd7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/tour-usa/usa-tour-01.jpg);
+}
+.about-promo2 .promo .promo-text {
+  font-size: 24px;
+  font-family: mySecondFont;
+  margin-bottom: 60px;
+}
+.about-promo2 .promo .read-btn {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.about-promo2 #promo2 {
+  background-image: url(../images/tour-usa/usa-tour-02.jpg);
+}
+.about-promo2 #promo3 {
+  background-image: url(../images/tour-usa/usa-tour-03.jpg);
+}
+
+.about-promo3 {
+  max-width: 980px;
+  min-width: 304px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.about-promo3 .promo {
+  width: 298px;
+  height: 347px;
+  background-color: #faebd7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/tour-aus/aus-tour-01.jpg);
+}
+.about-promo3 .promo .promo-text {
+  font-size: 24px;
+  font-family: mySecondFont;
+  margin-bottom: 60px;
+}
+.about-promo3 .promo .read-btn {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.about-promo3 #promo2 {
+  background-image: url(../images/tour-aus/aus-tour-02.jpg);
+}
+.about-promo3 #promo3 {
+  background-image: url(../images/tour-aus/aus-tour-03.jpg);
+}
+
+.about-promo4 {
+  max-width: 980px;
+  min-width: 304px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.about-promo4 .promo {
+  width: 298px;
+  height: 347px;
+  background-color: #faebd7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/tour-nz/nz-tour-01.jpg);
+}
+.about-promo4 .promo .promo-text {
+  font-size: 24px;
+  font-family: mySecondFont;
+  margin-bottom: 60px;
+}
+.about-promo4 .promo .read-btn {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.about-promo4 #promo2 {
+  background-image: url(../images/tour-nz/nz-tour-02.jpg);
+}
+.about-promo4 #promo3 {
+  background-image: url(../images/tour-nz/nz-tour-03.jpg);
+}
+
+.about-promo5 {
+  max-width: 980px;
+  min-width: 304px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.about-promo5 .promo {
+  width: 298px;
+  height: 347px;
+  background-color: #faebd7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/tour-france/france-tour-01.jpg);
+}
+.about-promo5 .promo .promo-text {
+  font-size: 24px;
+  font-family: mySecondFont;
+  margin-bottom: 60px;
+}
+.about-promo5 .promo .read-btn {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.about-promo5 #promo2 {
+  background-image: url(../images/tour-france/france-tour-02.jpg);
+}
+.about-promo5 #promo3 {
+  background-image: url(../images/tour-france/france-tour-03.jpg);
+}
+
+.about-promo6 {
+  max-width: 980px;
+  min-width: 304px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.about-promo6 .promo {
+  width: 298px;
+  height: 347px;
+  background-color: #faebd7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/tour-egypt/egypt-tour-01.jpg);
+}
+.about-promo6 .promo .promo-text {
+  font-size: 24px;
+  font-family: mySecondFont;
+  margin-bottom: 60px;
+}
+.about-promo6 .promo .read-btn {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.about-promo6 #promo2 {
+  background-image: url(../images/tour-egypt/egypt-tour-02.jpg);
+}
+.about-promo6 #promo3 {
+  background-image: url(../images/tour-egypt/egypt-tour-03.jpg);
+}
+
+.about-promo7 {
+  max-width: 980px;
+  min-width: 304px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.about-promo7 .promo {
+  width: 298px;
+  height: 347px;
+  background-color: #faebd7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/tour-japan/japan-tour-01.jpg);
+}
+.about-promo7 .promo .promo-text {
+  font-size: 24px;
+  font-family: mySecondFont;
+  margin-bottom: 60px;
+}
+.about-promo7 .promo .read-btn {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.about-promo7 #promo2 {
+  background-image: url(../images/tour-japan/japan-tour-02.jpg);
+}
+.about-promo7 #promo3 {
+  background-image: url(../images/tour-japan/japan-tour-03.jpg);
+}
+
+.about-promo8 {
+  max-width: 980px;
+  min-width: 304px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.about-promo8 .promo {
+  width: 298px;
+  height: 347px;
+  background-color: #faebd7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/tour-canada/canada-tour-01.jpg);
+}
+.about-promo8 .promo .promo-text {
+  font-size: 24px;
+  font-family: mySecondFont;
+  margin-bottom: 60px;
+}
+.about-promo8 .promo .read-btn {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.about-promo8 #promo2 {
+  background-image: url(../images/tour-canada/canada-tour-02.jpg);
+}
+.about-promo8 #promo3 {
+  background-image: url(../images/tour-canada/canada-tour-03.jpg);
+}
+
+.about-promo9 {
+  max-width: 980px;
+  min-width: 304px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.about-promo9 .promo {
+  width: 298px;
+  height: 347px;
+  background-color: #faebd7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/tour-uae/uae-tour-01.jpg);
+}
+.about-promo9 .promo .promo-text {
+  font-size: 24px;
+  font-family: mySecondFont;
+  margin-bottom: 60px;
+}
+.about-promo9 .promo .read-btn {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.about-promo9 #promo2 {
+  background-image: url(../images/tour-uae/uae-tour-02.jpg);
+}
+.about-promo9 #promo3 {
+  background-image: url(../images/tour-uae/uae-tour-03.jpg);
+}
+
+.days .day-header h1 {
+  margin-bottom: 2px;
+  font-family: mySecondFont, myThirdFont;
+  font-size: 60px;
+  font-style: bold;
+}
+.days .day-header p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 10%;
+}
+.days .day-header .title-bottom {
+  width: 171px;
+  height: 2px;
+  background-color: #000;
+  margin-bottom: 3%;
+}
+.days .book-btn {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 133px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+@media all and (max-width: 800px) {
+  .days {
+    text-align: center;
+    flex-direction: column;
+  }
+  .days .day-header .title-bottom {
+    margin: 0 auto;
+    margin-bottom: 3%;
+  }
+}
+.menu {
+  margin-bottom: 180px;
+}
+.menu .about-menu-posts {
+  margin-top: 5%;
+}
+.menu .about-menu-posts .menu-title {
+  font-family: mySecondFont, myThirdFont;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.menu .about-menu-posts .border-bottom-two {
+  width: 255px;
+  height: 2px;
+  background-color: #000;
+  margin-bottom: 3%;
+}
+.menu .about-menu-posts .menu-box {
+  max-width: 722px;
+  display: flex;
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  position: relative;
+}
+.menu .about-menu-posts .menu-box .menu-content {
+  max-width: 980px;
+  margin-left: 12%;
+}
+.menu .about-menu-posts .menu-box .menu-content button {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-style: none;
+}
+
+@media all and (max-width: 800px) {
+  .menu {
+    text-align: center;
+    flex-direction: column;
+  }
+  .menu .about-menu-posts .border-bottom-two {
+    margin: 0 auto;
+    margin-bottom: 3%;
+  }
+  .menu .about-menu-posts .menu-box {
+    flex-direction: column;
+  }
+  .menu .about-menu-posts .menu-box img {
+    margin: 0 auto;
+  }
+  .menu .about-menu-posts .menu-box .menu-content {
+    margin-left: 0;
+  }
+}
+.contact {
+  margin-bottom: 180px;
+  max-width: 980px;
+}
+.contact .about-contact {
+  margin-top: 7%;
+}
+.contact .about-contact .contact-title {
+  font-family: mySecondFont, myThirdFont;
+  font-size: 40px;
+  font-weight: bold;
+}
+.contact .about-contact .border-bottom-two {
+  width: 255px;
+  height: 2px;
+  background-color: #000;
+  margin-bottom: 6%;
+}
+.contact .about-contact .contact-box {
+  max-width: 722px;
+  display: flex;
+  margin-bottom: 30px;
+  display: flex;
+}
+.contact .about-contact .contact-box .contact-image-address .contact-address {
+  color: #000000;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+  margin-top: 5%;
+}
+.contact .about-contact .contact-box .contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 7%;
+}
+.contact .about-contact .contact-box .contact-form input {
+  width: 529px;
+  height: 60px;
+  background-color: #f5f5f5;
+  border-style: none;
+  padding-left: 20px;
+  margin-bottom: 4%;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 16px;
+}
+.contact .about-contact .contact-box .contact-form .message-box {
+  height: 199px;
+  background-color: #f5f5f5;
+  border-style: none;
+  padding-left: 20px;
+  padding-top: 10px;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 16px;
+  margin-bottom: 8%;
+}
+.contact .about-contact .contact-box .contact-form .read-btn {
+  background-color: #79addc;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 16px;
+  border-radius: 2px;
+  width: 167px;
+  height: 60px;
+  padding: 4%;
+}
+
+@media all and (max-width: 800px) {
+  .contact {
+    text-align: center;
+    flex-direction: column;
+  }
+  .contact .about-contact .border-bottom-two {
+    margin: 0 auto;
+    margin-bottom: 3%;
+  }
+  .contact .about-contact .contact-box {
+    flex-direction: column;
+  }
+  .contact .about-contact .contact-box .contact-form {
+    margin: 0 auto;
+  }
+}
+footer {
+  height: 100px;
+  background-color: pink;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+footer .footer-content {
+  color: #ffffff;
+  max-width: 980px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-content p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

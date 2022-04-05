@@ -1,0 +1,66 @@
+.menu {
+  margin-bottom: 180px;
+
+  .about-menu-posts {
+    margin-top: 5%;
+
+    .menu-title {
+      font-family: mySecondFont, myThirdFont;
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+
+    .border-bottom-two {
+      width: 255px;
+      height: 2px;
+      background-color: #000;
+      margin-bottom: 3%;
+    }
+
+    .menu-box {
+      max-width: 722px;
+      display: flex;
+      position: relative;
+      margin-bottom: 30px;
+      display: flex;
+      position: relative;
+
+      .menu-content {
+        max-width: $content-width;
+        margin-left: 12%;
+
+        button {
+          @include site-button;
+          border-style: none;
+        }
+      }
+    }
+  }
+}
+
+// media query that breaks at
+@media all and (max-width: 800px) {
+  .menu {
+    text-align: center;
+    flex-direction: column;
+
+    .about-menu-posts {
+      .border-bottom-two {
+        margin: 0 auto;
+        margin-bottom: 3%;
+      }
+      .menu-box {
+        flex-direction: column;
+
+        img {
+          margin: 0 auto;
+        }
+
+        .menu-content {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.offers {
+  width: $home-form-width;
+  min-height: 200px;
+  margin: $center;
+  display: flex;
+  position: relative;
+  margin-bottom: 50px;
+  justify-content: space-between;
+
+  .offer {
+    .hero-image {
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: -80px auto 0 auto;
+      position: relative;
+
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $site-white;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        h1 {
+          color: $site-white;
+          font-size: 60px;
+          font-family: Proxima Nova ScOsf ExCn Rg, sans-serif;
+          font-weight: lighter;
+        }
+
+        button {
+          background-color: $site-blue;
+          width: 121px;
+          height: 40px;
+          color: $site-white;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+          font-weight: lighter;
+          border-radius: 50px;
+        }
+
+        h2 {
+          font-size: 30px;
+          font-weight: lighter;
+          font-family: Proxima Nova ScOsf ExCn Rg, sans-serif;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .offers {
+    width: 250px;
+    flex-direction: column;
+    min-height: 940px;
+  }
+}
